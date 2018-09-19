@@ -19,5 +19,3 @@ function renderBoard(width, height) {
   table.appendChild(tbody);
   return table;
 }
-
-
