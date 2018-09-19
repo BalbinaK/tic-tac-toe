@@ -8,3 +8,8 @@ td {
     background: url(x.png) no-repeat center;
     background-size: 50%;
 }
+
+.o {
+    background: url(o.png) no-repeat center;
+    background-size: 50%;
+}
