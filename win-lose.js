@@ -12,4 +12,4 @@ if (cells.forEach(function (item) {
   if (item.class === 'x' || item.class === 'o') {
     endGameAlert.classList.add('draw').innerHTML('No one wins');
   }
-}
+})
