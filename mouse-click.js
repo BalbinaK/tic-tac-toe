@@ -18,9 +18,16 @@ table.addEventListener('click', function (event) {
   }
 
   event.target.classList.add('x');
-  checkResult('x');
+  if(checkResult('x')) {
+    win('x');
+    return;
+  };
   drawItem('o');
-  checkResult('o');
+  if (checkResult('o')) {
+    win('o');
+    return;
+  }
+  
 
   function drawNumberFromRange(size) {
     return Math.floor(Math.random() * size);
