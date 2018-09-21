@@ -1,15 +1,14 @@
-var endGameAlert = document.createElement('div');
-game.appendChild(endGameAlert);
-endGameAlert.classList.add('alert')
+function win() {
+  var endGameAlert = document.createElement('div');
+  game.appendChild(endGameAlert);
+  endGameAlert.classList.add('alert')
 
-var cells = document.querySelector('td')
-
-function cellTaken(cell) {
-  return cell(!'td:not(.x):not(.o)');
+  if (checkResult(x)) {
+    return endGameAlert.innerHTML(x + " won")
+  }
+  if (checkResult(o)) {
+    return endGameAlert.innerHTML(o + " won")
+  } else {
+    return endGameAlert.innerHTML("no one wins")
+  }
 }
-//nie wiem jak sprawdzić warunek posiadania klasy "x" lub "o"
-// if (cells.forEach(function (item) {
-//   if (item.class === 'x' || item.class === 'o') {
-//     endGameAlert.classList.add('draw').innerHTML('No one wins');
-//   }
-// }
